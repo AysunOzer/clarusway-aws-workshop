@@ -43,14 +43,11 @@ Resources:
                 wget -P https://raw.githubusercontent.com/AysunOzer/clarusway-aws-workshop/master/001-roman-numerals-converter/templates/result.html
                 wget https://raw.githubusercontent.com/AysunOzer/clarusway-aws-workshop/master/001-roman-numerals-converter/app.py
                 python3 app.py 
-
-                
-                               
-    
+                             
 Outputs:
   WebSiteURL:
     Description: Roman Numerals Converter Application Website URL
     Value: !Sub
         - http://${PublicAddress}
-        - PublicAdress: !GetAtt MyWebServer.PublicDnsName
+        - PublicAddress: !GetAtt MyWebServer.PublicDnsName
  
